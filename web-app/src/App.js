@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+// Это корневой компонент
+// Сохраняйте компоненты в папке components
+// Если создаёте универсальный компонет (например кнопка) сохраняйте в папку components/generic
+// Для своих корневых компонентов можно создавать свои подпапки. Например components/products для компонета автомобиля
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
