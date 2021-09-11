@@ -1,75 +1,120 @@
-# auto-complect-service.netlify
+# Проект auto-complect-service
 
-# Netlify URL
+## Netlify
 https://auto-complect-service.netlify.app/
 
------------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Правила работы в репозитории
 
-## Available Scripts
+- __main__ -> prodaction branch
+- __dev__ -> develpmnet branch
+              - __task-1-olya__
+              - __task-1-marina__
 
-In the project directory, you can run:
 
-### `npm start`
+- __main__ - главная production ветка. В неё мержится готовый продукт и протестированный продукт только из ветки -dev. Мержить и делать ПР в эту ветку из других веток запрещено.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- __dev__ - основная ветка разработки. Содержит актуальный код на данный момент вариант от всех разработчиков. При старте разработки нового функционала клонироваться нужно от этой ветки.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Перед каждым продолжением работы__ необходимо делать
+			__git pull__
+поскольку вы работаете не одни и возможно кто-то другой уже что-то запушил(залил в гит) и репозиторий обновился.
 
-### `npm test`
+Для работы над какой-то фичей вы должны __из ветки - dev сделать свою собственную ветку__ командой
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+			__git checkout -b <название ветки>__ Например: git checkout -b test-5-anton
 
-### `npm run build`
+ Назвать ветку можно следующим образом:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ 			__task-1-olya__
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ это будет означать что работа ведётся ответственным разработчиком Олей, над страницей 1.
+ 
+ После того как закончили разработку, __протестируйте её__ и создавайте __Pool Request в ветку -dev__.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ __Внимание!__ На данном этапе предлагаю сделать демо на созвоне своего варианта работы.
 
-### `npm run eject`
+ А __ПОСЛЕ__ созвона - __замержить в ветку - dev__.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ СПРАВОЧНО:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Как создать/перейти в ветку
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- git status -> выясняем в какой ветке мы находимся
+- git checkout -b task-77 -> __создаём__ и переходи в ветку task-77
+- git checkot task-77 -> просто переходим в ветку, __ЕСЛИ ОНА УЖЕ СУЩЕСТВУЕТ__
 
-## Learn More
+ Как пушить в ветку:
+ Работа в терминале:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - git status ->  получаем инфо отекщем состоянии
+ - git add . -> включаем в коммит все свои файлы
+ - git commit -m "fix: terrible bug" -> создаем описание коммита
+ - git push -> отправляем в гит
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Правила создания коммитов
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Требования к именам коммитов
 
-### Analyzing the Bundle Size
+Названия коммитов должны быть согласно [гайдлайну](https://www.conventionalcommits.org/en/v1.0.0/)
+Должен использоваться __present tense__ ("add feature" not "added feature")
+Должен использоваться __imperative mood__ ("move cursor to..." not "moves cursor to...")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Примеры имен коммитов
 
-### Making a Progressive Web App
+__init: - используется для начала проекта/таска.__
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Примеры:
 
-### Advanced Configuration
+init: start youtube-task
+init: start mentor-dashboard task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+__feat: - это реализованная новая функциональность из технического задания (добавил поддержку зумирования, добавил footer, добавил карточку продукта).__
 
-### Deployment
+Примеры:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+feat: add basic page layout
+feat: implement search box
+feat: implement request to youtube API
+feat: implement swipe for horizontal list
+feat: add additional navigation button
+feat: add banner
+feat: add social links
+feat: add physical security section
+feat: add real social icons
 
-### `npm run build` fails to minify
+__fix: - исправил ошибку в ранее реализованной функциональности.__
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Примеры:
+
+fix: implement correct loading data from youtube
+fix: change layout for video items to fix bugs
+fix: relayout header for firefox
+fix: adjust social links for mobile
+
+__refactor: - новой функциональности не добавлял / поведения не менял. Файлы в другие места положил, удалил, добавил. Изменил форматирование кода (
+white-space, formatting, missing semi-colons, etc). Улучшил алгоритм, без изменения функциональности.__
+
+Примеры:
+
+refactor: change structure of the project
+refactor: rename vars for better readability
+refactor: apply eslint
+refactor: apply prettier
+
+__docs: - используется при работе с документацией/readme проекта.__
+
+Примеры:
+
+docs: update readme with additional information
+docs: update description of run() method
+
+#### Создание компонентов
+
+__App__ -> Это корневой компонент
+   Сохраняйте компоненты в папке __src/components__
+   Если создаёте универсальный компонет (например кнопка) сохраняйте в папку __components/generic__
+   Для своих корневых компонентов можно создавать свои подпапки. Например __components/products__ для компонета автомобиля
+
