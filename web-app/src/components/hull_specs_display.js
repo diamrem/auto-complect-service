@@ -8,6 +8,7 @@ export default function Hull_specs_display() {
    return(
         <div className = "hull_specs_display_wrapper">
             {hull_types.map((hull_types, index) => {
+            console.log(index)
             return(
             <div>
                 <Hull_spec_prices />
@@ -17,10 +18,10 @@ export default function Hull_specs_display() {
                     <ul>Трансмиссия <br/> {hull_types.transmission}</ul>
                     <ul>Салон <br/> {hull_types.interior}</ul>
                     <ul>Тип привода <br/> {hull_types.drive_type}</ul>
-                    <ul>мощность двигателя <br/> {hull_types.engine_power}</ul>
+                    <ul>мощность двигателя <br/> {hull_types.engine_power}</ul> 
                 </ol>
                 <Price_list_btn />
-                <Configurator_btn />
+                <Configurator_btn hull_types = {hull_types}/>
             </div>
             );
             })}
