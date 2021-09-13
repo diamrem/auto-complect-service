@@ -6,19 +6,19 @@ import Hull_spec_prices from './Hull_spec_prices';
 
 export default function Hull_specs_display() {
    return(
-        <div>
+        <div className = "hull_specs_display_wrapper">
             {hull_types.map((hull_types, index) => {
             return(
             <div>
                 <Hull_spec_prices />
-                <ul key={index}>
+                <ol key={index} className = "specs_display_list">
                     <ul>Тип Двигателя <br/> {hull_types.engine}</ul>
                     <ul>Тип топлива <br/> {hull_types.fuel_type}</ul>
                     <ul>Трансмиссия <br/> {hull_types.transmission}</ul>
                     <ul>Салон <br/> {hull_types.interior}</ul>
                     <ul>Тип привода <br/> {hull_types.drive_type}</ul>
                     <ul>мощность двигателя <br/> {hull_types.engine_power}</ul>
-                </ul>
+                </ol>
                 <Price_list_btn />
                 <Configurator_btn />
             </div>
@@ -26,13 +26,4 @@ export default function Hull_specs_display() {
             })}
         </div>
    )
-    
-    // return(
-    // <div>
-    //     <Hull_spec_prices />
-    //     <Spec_display />
-    //     <Price_list_btn />
-    //     <Configurator_btn />
-    // </div>
-    // )  
 }
