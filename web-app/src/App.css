@@ -1,15 +1,32 @@
 .App {
   text-align: center;
 }
+
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
 }
+.logo_item {
+  margin-right: 83px;
+}
 .logo_link {
-  padding: 16px;
-  margin: 8px;
+  padding: 0px;
+  margin: 16px 8px;
   color: #333333;
   text-decoration: none;
+}
+.logo_image_item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 151px;
+}
+.logo_image {
+  padding: 0px;
+  margin: 16px 8px;
+}
+.logo_link:hover .logo_link:focus .logo_link:active {
+  background: #0049aa;
 }

@@ -20,9 +20,18 @@ export default Logo;
 function Image() {
   return (
     <image>
-      <ul className="logo_image">
-        <img src="/logo_atlant.png" className="logo_image1" />
-        <img src="/logo_ford.png" className="logo_image2" />
+      <ul className="logo_image_item">
+        <a href="https://atlantm.by/">
+          <img src="/logo_atlant.png" className="logo_image" />
+        </a>
+        <img src="/line1.png" className="logo_image" />
+        <a href="https://atlantm.by/catalog/ford/">
+          <img
+            src="/logo_ford.png"
+            className="logo_image"
+            href="https://atlantm.by/catalog/ford/"
+          />
+        </a>
       </ul>
     </image>
   );
