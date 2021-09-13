@@ -1,6 +1,7 @@
 function Logo() {
   return (
     <logo className="logo">
+      <Image />
       <ul className="logo_item">
         <a className="logo_link" href="https://atlantm.by/catalog/ford/">
           Автомобили
@@ -17,7 +18,12 @@ function Logo() {
 export default Logo;
 
 function Image() {
-  <image>
-    <ul className="image_item"></ul>
-  </image>;
+  return (
+    <image>
+      <ul className="logo_image">
+        <img src="/logo_atlant.png" className="logo_image1" />
+        <img src="/logo_ford.png" className="logo_image2" />
+      </ul>
+    </image>
+  );
 }
