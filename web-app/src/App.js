@@ -9,7 +9,9 @@ import Hull_specs_display from './components/Hull_specs_display'
 function App() {
   return (
     <div className="App">
-      <Hull_specs_display />
+      <div>
+        <Hull_specs_display />
+      </div>
     </div>
   );
 }

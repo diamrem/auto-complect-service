@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Hull_spec_prices() {
+export default function Hull_spec_prices(props) {
     return(
         <div>
-            <p>Цена от 100 950 BYN</p>
-            <p>от 2 978 055 RUB</p>
+            <p>Цена от {props.base_price} {props.base_price_currency}</p>
+            <p>от {props.base_price*10} RUB</p>
         </div>
     )
 }

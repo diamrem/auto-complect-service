@@ -7,11 +7,13 @@ import Hull_spec_prices from './Hull_spec_prices';
 export default function Hull_specs_display() {
    return(
         <div className = "hull_specs_display_wrapper">
+             {/* тут код проходит по json'у и подтягивает все хранящиеся там объекты */}
             {hull_types.map((hull_types, index) => {
-            console.log(index)
             return(
             <div>
-                <Hull_spec_prices />
+                {/* передает переменные для расчета цены */}
+                <Hull_spec_prices base_price = {hull_types.base_price} base_price_currency = {hull_types.base_price_currency}/>
+                {/* перечисление всех характеристик */}
                 <ol key={index} className = "specs_display_list">
                     <ul>Тип Двигателя <br/> {hull_types.engine}</ul>
                     <ul>Тип топлива <br/> {hull_types.fuel_type}</ul>
@@ -21,6 +23,8 @@ export default function Hull_specs_display() {
                     <ul>мощность двигателя <br/> {hull_types.engine_power}</ul> 
                 </ol>
                 <Price_list_btn />
+                {/* передает текущий объект в кнопку для конфигуратора (при нажатии на кнопку
+                    в консоль выведет текущий объект) */}
                 <Configurator_btn hull_types = {hull_types}/>
             </div>
             );
