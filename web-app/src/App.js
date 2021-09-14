@@ -1,4 +1,5 @@
 import './App.css';
+import Block_ford_cards from "./Block_ford_cards"
 // Это корневой компонент
 // Сохраняйте компоненты в папке components
 // Если создаёте универсальный компонет (например кнопка) сохраняйте в папку components/generic
@@ -8,6 +9,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Block_ford_cards />
 
     </div>
   );
