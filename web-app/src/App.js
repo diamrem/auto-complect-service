@@ -1,5 +1,5 @@
 import './App.css';
-import Block_ford_cards from "./Block_ford_cards"
+import Block_ford_cards from "./components/Block_ford_cards";
 // Это корневой компонент
 // Сохраняйте компоненты в папке components
 // Если создаёте универсальный компонет (например кнопка) сохраняйте в папку components/generic
